@@ -25,10 +25,10 @@
       margin: 2em 1em;
       white-space: nowrap;
       overflow: hidden;
-      -webkit-animation: typing 5s steps(40, end),
-      blink-caret .3s step-end infinite;
-      animation: typing 5s steps(40, end),
-      blink-caret .3s step-end infinite;
+      -webkit-animation: typing 8s steps(40, end),
+      blink-caret .5s step-end infinite;
+      animation: typing 8s steps(40, end),
+      blink-caret .5s step-end infinite;
     }
 
 
@@ -48,8 +48,8 @@
                 transform:rotate(270deg);
       }
       100%{
-                -ms-transform-origin:right;
-                -ms-transform:rotate(360deg);
+                transform-origin:right;
+                transform:rotate(360deg);
       }
     }
     .rotate{
@@ -89,8 +89,8 @@
                 transform:rotate(0deg);
       }
       100%{
-                -ms-transform-origin:top;
-                -ms-transform:rotate(120deg);
+                transform-origin:top;
+                transform:rotate(120deg);
       }
     }
 
@@ -111,8 +111,8 @@
                 transform:rotate(0deg);
       }
       100%{
-                -ms-transform-origin:top;
-                -ms-transform:rotate(-120deg);
+                transform-origin:top;
+                transform:rotate(-120deg);
       }
     }
 
