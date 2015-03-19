@@ -54,7 +54,7 @@
     }
     .rotate{
       margin-top: 150px;
-      margin-left: 280px;
+      margin-left: 350px;
       background-color: #B3D5F7;
       font-family:Consolas, Monaco, monospace;
       padding:15px;
@@ -65,11 +65,67 @@
 
     }
     .rotate:hover{
+     cursor: pointer;
      background-color: #3F79BA;
      color:#FFFFFF;
      -webkit-transition: color .4s linear, background-color .4s linear;
      transition: color .4s linear, background-color .4s linear;
     }
+
+
+    @-webkit-keyframes PutHand_L{
+      0%{
+        -webkit-transform-origin:top;
+        -webkit-transform:rotate(0deg);
+      }
+      100%{
+        -webkit-transform-origin:top;
+        -webkit-transform:rotate(120deg);
+      }
+    }
+    @keyframes PutHand_L{
+      0%{
+                transform-origin:top;
+                transform:rotate(0deg);
+      }
+      100%{
+                -ms-transform-origin:top;
+                -ms-transform:rotate(120deg);
+      }
+    }
+
+
+    @-webkit-keyframes PutHand_R{
+      0%{
+        -webkit-transform-origin:top;
+        -webkit-transform:rotate(0deg);
+      }
+      100%{
+        -webkit-transform-origin:top;
+        -webkit-transform:rotate(-120deg);
+      }
+    }
+    @keyframes PutHand_R{
+      0%{
+                transform-origin:top;
+                transform:rotate(0deg);
+      }
+      100%{
+                -ms-transform-origin:top;
+                -ms-transform:rotate(-120deg);
+      }
+    }
+
+    .rotate:active ~ #man #man_left_hand{
+     -webkit-animation: PutHand_L 1 1s forwards;
+      animation: PutHand_L 1 1s forwards;
+    }
+
+    .rotate:active ~ #man #man_right_hand{
+         -webkit-animation: PutHand_R 1 1s forwards;
+          animation: PutHand_R 1 1s forwards;
+    }
+
     .rotate2{
       position: relative;
       margin-top: 30px;
@@ -163,6 +219,20 @@
       animation:BeRotate2_2 0.8s infinite 0.2s;
     }
 
+    #man{
+      position: relative;
+    }
+    #man img{
+      position: absolute;
+    }
+    #man #man_left_hand{
+      left:200px;
+      top:290px;
+    }
+    #man #man_right_hand{
+      left:260px;
+      top:290px;
+    }
   </style>
 </head>
 
@@ -177,10 +247,17 @@
   </div>
 
   <div class='rotate'>
-    Something Rotate.
+    Hand Up.
   </div>
 
-  
+  <div id='man'>
+    <img id='man_center' src='image/man_center.png' />
+    <img id='man_left_hand' src='image/man_left_hand.png' />
+    <img id='man_right_hand' src='image/man_right_hand.png' />
+  </div>
+
+
 
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </html>
