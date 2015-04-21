@@ -18,7 +18,6 @@
     position: absolute;
     border-radius:99em;
     text-align: center;
-    font-size: 30px;
     line-height:200px;
     border-color: black;
     border-style: solid;
@@ -26,22 +25,26 @@
     border-width:2px;
   }
   #img1{
+    font-size: 30px;
     z-index: 2;
     transition: 0.5s;
   }
   #img2{  
     -webkit-opacity:0;
     opacity:0;
+    font-size: 5px;
     transition: 0.5s;
   }
   #img1:hover{
     transform:rotate(360deg);
+    font-size: 5px;
     opacity:0;
     transition: 0.5s;
   }
   #img1:hover + #img2{
     transform:rotate(-360deg);
     opacity:1;
+    font-size: 30px;
     transition: 0.5s;
   }
 </style>
